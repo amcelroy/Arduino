@@ -1,0 +1,264 @@
+.TH "WindowFunctions" 3 "Wed Feb 24 2016" "Version .1" "WindowsFunctions" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WindowFunctions \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WindowFunctions\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBWINDOW_FUNC_RETURN\fP { \fBSUCCESS\fP = 1, \fBFLOAT_NOT_INIT\fP, \fBDOUBLE_NOT_INIT\fP, \fBLENGTH_ERROR\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitHanning_32f\fP (unsigned int Length)"
+.br
+.ti -1c
+.RI "void \fBinitHanning_64f\fP (unsigned int Length)"
+.br
+.ti -1c
+.RI "void \fBinitTriangle_32f\fP (unsigned int Length)"
+.br
+.ti -1c
+.RI "void \fBinitTriangle_64f\fP (unsigned int Length)"
+.br
+.ti -1c
+.RI "void \fBinitWelch_32f\fP (unsigned int Length)"
+.br
+.ti -1c
+.RI "void \fBinitWelch_64f\fP (unsigned int Length)"
+.br
+.ti -1c
+.RI "void \fBinitHamming_32f\fP (unsigned int Length, float Alpha, float Beta)"
+.br
+.ti -1c
+.RI "void \fBinitHamming_64f\fP (unsigned int Length, double Alpha, double Beta)"
+.br
+.ti -1c
+.RI "void \fBinitPowerOfCosine_32f\fP (unsigned int Length, float Power)"
+.br
+.ti -1c
+.RI "void \fBinitPowerOfCosine_64f\fP (unsigned int Length, double Power)"
+.br
+.ti -1c
+.RI "\fBWINDOW_FUNC_RETURN\fP \fBapplyWindow\fP (float Input[], unsigned int InputLength)"
+.br
+.ti -1c
+.RI "\fBWINDOW_FUNC_RETURN\fP \fBapplyWindow\fP (float Input[], unsigned int InputLength, float Output[], unsigned int OutputLength)"
+.br
+.ti -1c
+.RI "\fBWINDOW_FUNC_RETURN\fP \fBapplyWindow\fP (double Input[], unsigned int InputLength)"
+.br
+.ti -1c
+.RI "\fBWINDOW_FUNC_RETURN\fP \fBapplyWindow\fP (double Input[], unsigned int InputLength, double Output[], unsigned int OutputLength)"
+.br
+.ti -1c
+.RI "float \fBgetWindowValueAt_32f\fP (unsigned int Index)"
+.br
+.ti -1c
+.RI "double \fBgetWindowValueAt_64f\fP (unsigned int Index)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This library is free to use and encapsulates signal processing windows that can be used to help suppress artifacts when working with analog data arrays\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBWindowFunctions::WINDOW_FUNC_RETURN\fP"
+Quick enumerations to check the output of applyWindow, 1 is good, anything else is not good\&. FLOAT_NOT_INIT: Tried to apply a _32f window without initialization DOUBLE_NOT_INIT: Tried to apply a _64f window without initialization LENGTH_ERROR: Length of the window didn't match the length of the input or output array 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBWindowFunctions::WINDOW_FUNC_RETURN\fP WindowFunctions::applyWindow (float Input[], unsigned int InputLength)"
+Applies the initialized window to an Input array; overwrites the Input array\&. If the Input Length does not equal the initialized Length, the function return LENGTH_ERROR\&. If the window is not initialized, function returns FLOAT_NOT_INIT\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIInput\fP 
+.br
+\fIInputLength\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+SUCCESS, FLOAT_NOT_INIT, LENGTH_ERROR 
+.RE
+.PP
+
+.SS "\fBWindowFunctions::WINDOW_FUNC_RETURN\fP WindowFunctions::applyWindow (float Input[], unsigned int InputLength, float Output[], unsigned int OutputLength)"
+Applies the initialized window to an Input array; overwrites the Output array\&. If the Input and Output Length does not equal the initialized Length, the function return LENGTH_ERROR\&. If the window is not initialized, function returns FLOAT_NOT_INIT\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIInput\fP 
+.br
+\fIInputLength\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+SUCCESS, FLOAT_NOT_INIT, LENGTH_ERROR 
+.RE
+.PP
+
+.SS "\fBWindowFunctions::WINDOW_FUNC_RETURN\fP WindowFunctions::applyWindow (double Input[], unsigned int InputLength)"
+Applies the initialized window to an Input array; overwrites the Input array\&. If the Input Length does not equal the initialized Length, the function return LENGTH_ERROR\&. If the window is not initialized, function returns DOUBLE_NOT_INIT\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIInput\fP 
+.br
+\fIInputLength\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+SUCCESS, DOUBLE_NOT_INIT, LENGTH_ERROR 
+.RE
+.PP
+
+.SS "\fBWindowFunctions::WINDOW_FUNC_RETURN\fP WindowFunctions::applyWindow (double Input[], unsigned int InputLength, double Output[], unsigned int OutputLength)"
+Applies the initialized window to an Input array; overwrites the Output array\&. If the Input and Output Length does not equal the initialized Length, the function return LENGTH_ERROR\&. If the window is not initialized, function returns DOUBLE_NOT_INIT\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIInput\fP 
+.br
+\fIInputLength\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+SUCCESS, DOUBLE_NOT_INIT, LENGTH_ERROR 
+.RE
+.PP
+
+.SS "float WindowFunctions::getWindowValueAt_32f (unsigned int Index)"
+Get the Windows value at the Index\&. Useful if you are writing your own loops and the \fBapplyWindow()\fP functions would be more inefficient\&. No error checking is done!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIIndex\fP Index of the value, should be 0 to Length - 1 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value of the window at the Index position 
+.RE
+.PP
+
+.SS "double WindowFunctions::getWindowValueAt_64f (unsigned int Index)"
+Get the Windows value at the Index\&. Useful if you are writing your own loops and the \fBapplyWindow()\fP functions would be more inefficient\&. No error checking is done!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIIndex\fP Index of the value, should be 0 to Length - 1 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value of the window at the Index position\&. 
+.RE
+.PP
+
+.SS "void WindowFunctions::initHamming_32f (unsigned int Length, float Alpha, float Beta)"
+Creates a 32-bit float look-up table for a Hamming Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+.SS "void WindowFunctions::initHamming_64f (unsigned int Length, double Alpha, double Beta)"
+Creates a 64-bit float look-up table for a Hamming Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+.SS "void WindowFunctions::initHanning_32f (unsigned int Length)"
+Creates a 32-bit float look-up table for a Hanning Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+.SS "void WindowFunctions::initHanning_64f (unsigned int Length)"
+Creates a 64-bit float look-up table for a Hanning Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+.SS "void WindowFunctions::initPowerOfCosine_32f (unsigned int Length, float Power)"
+Creates a 32-bit float look-up table for a Parzen Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+.SS "void WindowFunctions::initPowerOfCosine_64f (unsigned int Length, double Power)"
+Creates a 64-bit float look-up table for a Parzen Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+.SS "void WindowFunctions::initTriangle_32f (unsigned int Length)"
+Creates a 32-bit float look-up table for a Triangle Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+.SS "void WindowFunctions::initTriangle_64f (unsigned int Length)"
+Creates a 64-bit float look-up table for a Triangle Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+.SS "void WindowFunctions::initWelch_32f (unsigned int Length)"
+Creates a 32-bit float look-up table for a Welch Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+.SS "void WindowFunctions::initWelch_64f (unsigned int Length)"
+Creates a 64-bit float look-up table for a Welch Window\&. Overwrites any other table\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fILength\fP Length of the Window, i\&.e\&. 256, 1024, etc 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WindowsFunctions from the source code\&.

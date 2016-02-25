@@ -1,0 +1,12 @@
+WindowFunctions	KEYWORD1
+initHanning_32f KEYWORD2
+initHanning_64f KEYWORD2
+initTriangle_32f KEYWORD2
+initTriangle_64f KEYWORD2
+initWelch_32f KEYWORD2
+initWelch_64f KEYWORD2
+initHamming_32f KEYWORD2
+initHamming_64f KEYWORD2
+initPowerOfCosine_32f KEYWORD2
+initPowerOfCosine_64f KEYWORD2
+applyWindow KEYWORD2

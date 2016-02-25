@@ -1,0 +1,332 @@
+\hypertarget{class_window_functions}{}\section{Window\+Functions Class Reference}
+\label{class_window_functions}\index{Window\+Functions@{Window\+Functions}}
+
+
+{\ttfamily \#include $<$Window\+Functions.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_window_functions_a0307e2e5d044d1f81410766ac035fd3f}{W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN} \{ {\bfseries S\+U\+C\+C\+E\+SS} = 1, 
+{\bfseries F\+L\+O\+A\+T\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}, 
+{\bfseries D\+O\+U\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT}, 
+{\bfseries L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_window_functions_a773581cc56cc14bbda59c8ead7f3603b}{init\+Hanning\+\_\+32f} (unsigned int Length)
+\item 
+void \hyperlink{class_window_functions_a1a9dc2251451dcb466e292f8f77a3f22}{init\+Hanning\+\_\+64f} (unsigned int Length)
+\item 
+void \hyperlink{class_window_functions_a73fb733c29dd2bccba6f4a385f404895}{init\+Triangle\+\_\+32f} (unsigned int Length)
+\item 
+void \hyperlink{class_window_functions_a105b7b0542348f533bc653f933600c99}{init\+Triangle\+\_\+64f} (unsigned int Length)
+\item 
+void \hyperlink{class_window_functions_ae7f9c4ed76132771c367f98d09c24b79}{init\+Welch\+\_\+32f} (unsigned int Length)
+\item 
+void \hyperlink{class_window_functions_a0cf5a74cf6185ab9c50513cecc185d84}{init\+Welch\+\_\+64f} (unsigned int Length)
+\item 
+void \hyperlink{class_window_functions_a8c0c60524b6dda82bdeb122a9d97cc69}{init\+Hamming\+\_\+32f} (unsigned int Length, float Alpha, float Beta)
+\item 
+void \hyperlink{class_window_functions_a82257be842bb63463a9e58c424ec8a79}{init\+Hamming\+\_\+64f} (unsigned int Length, double Alpha, double Beta)
+\item 
+void \hyperlink{class_window_functions_a14b9934352808de84c563e3d888d65bc}{init\+Power\+Of\+Cosine\+\_\+32f} (unsigned int Length, float Power)
+\item 
+void \hyperlink{class_window_functions_a3b9af9a72491c1ebb8d47d17de446c9d}{init\+Power\+Of\+Cosine\+\_\+64f} (unsigned int Length, double Power)
+\item 
+\hyperlink{class_window_functions_a0307e2e5d044d1f81410766ac035fd3f}{W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN} \hyperlink{class_window_functions_a93c77058ff5d86ea60e73b6cbecf0ec0}{apply\+Window} (float Input\mbox{[}$\,$\mbox{]}, unsigned int Input\+Length)
+\item 
+\hyperlink{class_window_functions_a0307e2e5d044d1f81410766ac035fd3f}{W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN} \hyperlink{class_window_functions_a9e5b8accbd50374fa0431955812acc78}{apply\+Window} (float Input\mbox{[}$\,$\mbox{]}, unsigned int Input\+Length, float Output\mbox{[}$\,$\mbox{]}, unsigned int Output\+Length)
+\item 
+\hyperlink{class_window_functions_a0307e2e5d044d1f81410766ac035fd3f}{W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN} \hyperlink{class_window_functions_ab9a60a32334b2c8e7ddbfce810ca29bb}{apply\+Window} (double Input\mbox{[}$\,$\mbox{]}, unsigned int Input\+Length)
+\item 
+\hyperlink{class_window_functions_a0307e2e5d044d1f81410766ac035fd3f}{W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN} \hyperlink{class_window_functions_a14aa6ccc449e8690c44902c18e0cb7bd}{apply\+Window} (double Input\mbox{[}$\,$\mbox{]}, unsigned int Input\+Length, double Output\mbox{[}$\,$\mbox{]}, unsigned int Output\+Length)
+\item 
+float \hyperlink{class_window_functions_a314a75ca7ee48acbb23c9168141993ad}{get\+Window\+Value\+At\+\_\+32f} (unsigned int Index)
+\item 
+double \hyperlink{class_window_functions_adc0672a5dccbbb9034238acf27ec7f56}{get\+Window\+Value\+At\+\_\+64f} (unsigned int Index)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This library is free to use and encapsulates signal processing windows that can be used to help suppress artifacts when working with analog data arrays. 
+
+\subsection{Member Enumeration Documentation}
+\index{Window\+Functions@{Window\+Functions}!W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN@{W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN}}
+\index{W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN@{W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN}{WINDOW_FUNC_RETURN}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Window\+Functions\+::\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN}}\hypertarget{class_window_functions_a0307e2e5d044d1f81410766ac035fd3f}{}\label{class_window_functions_a0307e2e5d044d1f81410766ac035fd3f}
+Quick enumerations to check the output of apply\+Window, 1 is good, anything else is not good. F\+L\+O\+A\+T\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT\+: Tried to apply a \+\_\+32f window without initialization D\+O\+U\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT\+: Tried to apply a \+\_\+64f window without initialization L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR\+: Length of the window didn\textquotesingle{}t match the length of the input or output array 
+
+\subsection{Member Function Documentation}
+\index{Window\+Functions@{Window\+Functions}!apply\+Window@{apply\+Window}}
+\index{apply\+Window@{apply\+Window}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{apply\+Window(float Input[], unsigned int Input\+Length)}{applyWindow(float Input[], unsigned int InputLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Window\+Functions\+::\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN} Window\+Functions\+::apply\+Window (
+\begin{DoxyParamCaption}
+\item[{float}]{Input\mbox{[}$\,$\mbox{]}, }
+\item[{unsigned int}]{Input\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a93c77058ff5d86ea60e73b6cbecf0ec0}{}\label{class_window_functions_a93c77058ff5d86ea60e73b6cbecf0ec0}
+Applies the initialized window to an Input array; overwrites the Input array. If the Input Length does not equal the initialized Length, the function return L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR. If the window is not initialized, function returns F\+L\+O\+A\+T\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input} & \\
+\hline
+{\em Input\+Length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+SS, F\+L\+O\+A\+T\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT, L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}
+\index{Window\+Functions@{Window\+Functions}!apply\+Window@{apply\+Window}}
+\index{apply\+Window@{apply\+Window}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{apply\+Window(float Input[], unsigned int Input\+Length, float Output[], unsigned int Output\+Length)}{applyWindow(float Input[], unsigned int InputLength, float Output[], unsigned int OutputLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Window\+Functions\+::\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN} Window\+Functions\+::apply\+Window (
+\begin{DoxyParamCaption}
+\item[{float}]{Input\mbox{[}$\,$\mbox{]}, }
+\item[{unsigned int}]{Input\+Length, }
+\item[{float}]{Output\mbox{[}$\,$\mbox{]}, }
+\item[{unsigned int}]{Output\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a9e5b8accbd50374fa0431955812acc78}{}\label{class_window_functions_a9e5b8accbd50374fa0431955812acc78}
+Applies the initialized window to an Input array; overwrites the Output array. If the Input and Output Length does not equal the initialized Length, the function return L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR. If the window is not initialized, function returns F\+L\+O\+A\+T\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input} & \\
+\hline
+{\em Input\+Length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+SS, F\+L\+O\+A\+T\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT, L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}
+\index{Window\+Functions@{Window\+Functions}!apply\+Window@{apply\+Window}}
+\index{apply\+Window@{apply\+Window}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{apply\+Window(double Input[], unsigned int Input\+Length)}{applyWindow(double Input[], unsigned int InputLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Window\+Functions\+::\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN} Window\+Functions\+::apply\+Window (
+\begin{DoxyParamCaption}
+\item[{double}]{Input\mbox{[}$\,$\mbox{]}, }
+\item[{unsigned int}]{Input\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_ab9a60a32334b2c8e7ddbfce810ca29bb}{}\label{class_window_functions_ab9a60a32334b2c8e7ddbfce810ca29bb}
+Applies the initialized window to an Input array; overwrites the Input array. If the Input Length does not equal the initialized Length, the function return L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR. If the window is not initialized, function returns D\+O\+U\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input} & \\
+\hline
+{\em Input\+Length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+SS, D\+O\+U\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT, L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}
+\index{Window\+Functions@{Window\+Functions}!apply\+Window@{apply\+Window}}
+\index{apply\+Window@{apply\+Window}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{apply\+Window(double Input[], unsigned int Input\+Length, double Output[], unsigned int Output\+Length)}{applyWindow(double Input[], unsigned int InputLength, double Output[], unsigned int OutputLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Window\+Functions\+::\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+N\+C\+\_\+\+R\+E\+T\+U\+RN} Window\+Functions\+::apply\+Window (
+\begin{DoxyParamCaption}
+\item[{double}]{Input\mbox{[}$\,$\mbox{]}, }
+\item[{unsigned int}]{Input\+Length, }
+\item[{double}]{Output\mbox{[}$\,$\mbox{]}, }
+\item[{unsigned int}]{Output\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a14aa6ccc449e8690c44902c18e0cb7bd}{}\label{class_window_functions_a14aa6ccc449e8690c44902c18e0cb7bd}
+Applies the initialized window to an Input array; overwrites the Output array. If the Input and Output Length does not equal the initialized Length, the function return L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR. If the window is not initialized, function returns D\+O\+U\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input} & \\
+\hline
+{\em Input\+Length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+SS, D\+O\+U\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+I\+N\+IT, L\+E\+N\+G\+T\+H\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}
+\index{Window\+Functions@{Window\+Functions}!get\+Window\+Value\+At\+\_\+32f@{get\+Window\+Value\+At\+\_\+32f}}
+\index{get\+Window\+Value\+At\+\_\+32f@{get\+Window\+Value\+At\+\_\+32f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{get\+Window\+Value\+At\+\_\+32f(unsigned int Index)}{getWindowValueAt_32f(unsigned int Index)}}]{\setlength{\rightskip}{0pt plus 5cm}float Window\+Functions\+::get\+Window\+Value\+At\+\_\+32f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a314a75ca7ee48acbb23c9168141993ad}{}\label{class_window_functions_a314a75ca7ee48acbb23c9168141993ad}
+Get the Windows value at the Index. Useful if you are writing your own loops and the \hyperlink{class_window_functions_a93c77058ff5d86ea60e73b6cbecf0ec0}{apply\+Window()} functions would be more inefficient. No error checking is done!
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & Index of the value, should be 0 to Length -\/ 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the window at the Index position 
+\end{DoxyReturn}
+\index{Window\+Functions@{Window\+Functions}!get\+Window\+Value\+At\+\_\+64f@{get\+Window\+Value\+At\+\_\+64f}}
+\index{get\+Window\+Value\+At\+\_\+64f@{get\+Window\+Value\+At\+\_\+64f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{get\+Window\+Value\+At\+\_\+64f(unsigned int Index)}{getWindowValueAt_64f(unsigned int Index)}}]{\setlength{\rightskip}{0pt plus 5cm}double Window\+Functions\+::get\+Window\+Value\+At\+\_\+64f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_adc0672a5dccbbb9034238acf27ec7f56}{}\label{class_window_functions_adc0672a5dccbbb9034238acf27ec7f56}
+Get the Windows value at the Index. Useful if you are writing your own loops and the \hyperlink{class_window_functions_a93c77058ff5d86ea60e73b6cbecf0ec0}{apply\+Window()} functions would be more inefficient. No error checking is done!
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & Index of the value, should be 0 to Length -\/ 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the window at the Index position. 
+\end{DoxyReturn}
+\index{Window\+Functions@{Window\+Functions}!init\+Hamming\+\_\+32f@{init\+Hamming\+\_\+32f}}
+\index{init\+Hamming\+\_\+32f@{init\+Hamming\+\_\+32f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Hamming\+\_\+32f(unsigned int Length, float Alpha, float Beta)}{initHamming_32f(unsigned int Length, float Alpha, float Beta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Hamming\+\_\+32f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length, }
+\item[{float}]{Alpha, }
+\item[{float}]{Beta}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a8c0c60524b6dda82bdeb122a9d97cc69}{}\label{class_window_functions_a8c0c60524b6dda82bdeb122a9d97cc69}
+Creates a 32-\/bit float look-\/up table for a Hamming Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+\index{Window\+Functions@{Window\+Functions}!init\+Hamming\+\_\+64f@{init\+Hamming\+\_\+64f}}
+\index{init\+Hamming\+\_\+64f@{init\+Hamming\+\_\+64f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Hamming\+\_\+64f(unsigned int Length, double Alpha, double Beta)}{initHamming_64f(unsigned int Length, double Alpha, double Beta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Hamming\+\_\+64f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length, }
+\item[{double}]{Alpha, }
+\item[{double}]{Beta}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a82257be842bb63463a9e58c424ec8a79}{}\label{class_window_functions_a82257be842bb63463a9e58c424ec8a79}
+Creates a 64-\/bit float look-\/up table for a Hamming Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+\index{Window\+Functions@{Window\+Functions}!init\+Hanning\+\_\+32f@{init\+Hanning\+\_\+32f}}
+\index{init\+Hanning\+\_\+32f@{init\+Hanning\+\_\+32f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Hanning\+\_\+32f(unsigned int Length)}{initHanning_32f(unsigned int Length)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Hanning\+\_\+32f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a773581cc56cc14bbda59c8ead7f3603b}{}\label{class_window_functions_a773581cc56cc14bbda59c8ead7f3603b}
+Creates a 32-\/bit float look-\/up table for a Hanning Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+\index{Window\+Functions@{Window\+Functions}!init\+Hanning\+\_\+64f@{init\+Hanning\+\_\+64f}}
+\index{init\+Hanning\+\_\+64f@{init\+Hanning\+\_\+64f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Hanning\+\_\+64f(unsigned int Length)}{initHanning_64f(unsigned int Length)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Hanning\+\_\+64f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a1a9dc2251451dcb466e292f8f77a3f22}{}\label{class_window_functions_a1a9dc2251451dcb466e292f8f77a3f22}
+Creates a 64-\/bit float look-\/up table for a Hanning Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+\index{Window\+Functions@{Window\+Functions}!init\+Power\+Of\+Cosine\+\_\+32f@{init\+Power\+Of\+Cosine\+\_\+32f}}
+\index{init\+Power\+Of\+Cosine\+\_\+32f@{init\+Power\+Of\+Cosine\+\_\+32f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Power\+Of\+Cosine\+\_\+32f(unsigned int Length, float Power)}{initPowerOfCosine_32f(unsigned int Length, float Power)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Power\+Of\+Cosine\+\_\+32f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length, }
+\item[{float}]{Power}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a14b9934352808de84c563e3d888d65bc}{}\label{class_window_functions_a14b9934352808de84c563e3d888d65bc}
+Creates a 32-\/bit float look-\/up table for a Parzen Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+\index{Window\+Functions@{Window\+Functions}!init\+Power\+Of\+Cosine\+\_\+64f@{init\+Power\+Of\+Cosine\+\_\+64f}}
+\index{init\+Power\+Of\+Cosine\+\_\+64f@{init\+Power\+Of\+Cosine\+\_\+64f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Power\+Of\+Cosine\+\_\+64f(unsigned int Length, double Power)}{initPowerOfCosine_64f(unsigned int Length, double Power)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Power\+Of\+Cosine\+\_\+64f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length, }
+\item[{double}]{Power}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a3b9af9a72491c1ebb8d47d17de446c9d}{}\label{class_window_functions_a3b9af9a72491c1ebb8d47d17de446c9d}
+Creates a 64-\/bit float look-\/up table for a Parzen Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+\index{Window\+Functions@{Window\+Functions}!init\+Triangle\+\_\+32f@{init\+Triangle\+\_\+32f}}
+\index{init\+Triangle\+\_\+32f@{init\+Triangle\+\_\+32f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Triangle\+\_\+32f(unsigned int Length)}{initTriangle_32f(unsigned int Length)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Triangle\+\_\+32f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a73fb733c29dd2bccba6f4a385f404895}{}\label{class_window_functions_a73fb733c29dd2bccba6f4a385f404895}
+Creates a 32-\/bit float look-\/up table for a Triangle Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+\index{Window\+Functions@{Window\+Functions}!init\+Triangle\+\_\+64f@{init\+Triangle\+\_\+64f}}
+\index{init\+Triangle\+\_\+64f@{init\+Triangle\+\_\+64f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Triangle\+\_\+64f(unsigned int Length)}{initTriangle_64f(unsigned int Length)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Triangle\+\_\+64f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a105b7b0542348f533bc653f933600c99}{}\label{class_window_functions_a105b7b0542348f533bc653f933600c99}
+Creates a 64-\/bit float look-\/up table for a Triangle Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+\index{Window\+Functions@{Window\+Functions}!init\+Welch\+\_\+32f@{init\+Welch\+\_\+32f}}
+\index{init\+Welch\+\_\+32f@{init\+Welch\+\_\+32f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Welch\+\_\+32f(unsigned int Length)}{initWelch_32f(unsigned int Length)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Welch\+\_\+32f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_ae7f9c4ed76132771c367f98d09c24b79}{}\label{class_window_functions_ae7f9c4ed76132771c367f98d09c24b79}
+Creates a 32-\/bit float look-\/up table for a Welch Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+\index{Window\+Functions@{Window\+Functions}!init\+Welch\+\_\+64f@{init\+Welch\+\_\+64f}}
+\index{init\+Welch\+\_\+64f@{init\+Welch\+\_\+64f}!Window\+Functions@{Window\+Functions}}
+\subsubsection[{\texorpdfstring{init\+Welch\+\_\+64f(unsigned int Length)}{initWelch_64f(unsigned int Length)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+Functions\+::init\+Welch\+\_\+64f (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Length}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_functions_a0cf5a74cf6185ab9c50513cecc185d84}{}\label{class_window_functions_a0cf5a74cf6185ab9c50513cecc185d84}
+Creates a 64-\/bit float look-\/up table for a Welch Window. Overwrites any other table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Length} & Length of the Window, i.\+e. 256, 1024, etc \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Window\+Functions.\+h\item 
+Window\+Functions.\+cpp\end{DoxyCompactItemize}
